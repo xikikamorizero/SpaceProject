@@ -2,7 +2,7 @@
 import style from "./styles/Apod.module.css";
 import { useGetApodQuery } from "../../store/Apod/apod";
 import { Base } from "../../components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { styled } from "styled-components";
 import { PageData } from "../../types/types";
 
@@ -11,9 +11,21 @@ export const Apod = () => {
 
     const [page, setPage] = useState<PageData | null>(null);
 
+    const handleBodyScroll = () => {
+        if (page) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      };
+      
+      useEffect(() => {
+        handleBodyScroll();
+      }, [page]);
+
     return (
         <div className={style.home}>
-            <Container page={page}>
+            <div className={style.container}>
                 {page ? <Base.InfoPage pageData={page} setPage={setPage} /> : null}
                 {isLoading ? (
                     <Base.Preloader />
@@ -24,7 +36,7 @@ export const Apod = () => {
                         ))}
                     </Base.ContainerItem>
                 )}
-            </Container>
+            </div>
         </div>
     );
 };

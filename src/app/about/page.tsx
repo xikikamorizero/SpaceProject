@@ -1,7 +1,7 @@
+import { AboutUs } from "../../../page";
+
 export default function About(){
     return(
-        <div>
-            About
-        </div>
+    <AboutUs />
     )
 }

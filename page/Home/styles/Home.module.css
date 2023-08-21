@@ -4,6 +4,17 @@
     justify-content: center;
     align-items: center;
 }
+.container{
+    max-height: auto;
+    width: var(--container);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding-top: 4vw;
+}
 .containerSearchForm{
     width: 100%;
     display: flex;

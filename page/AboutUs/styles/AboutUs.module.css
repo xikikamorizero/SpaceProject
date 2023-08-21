@@ -1,0 +1,17 @@
+.aboutUs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    padding: 20px 0;
+    width: var(--container);
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container h1 {
+    margin-bottom: 10px;
+}

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Base } from "../../components";
 import { useGetTechtransferQuery } from "../../store/Techtransfer/techtransfer";
@@ -10,9 +10,21 @@ export const Techtransfer = () => {
     const { data, isLoading, error } = useGetTechtransferQuery(1);
     const [page, setPage] = useState<PageData | null>(null);
 
+    const handleBodyScroll = () => {
+        if (page) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      };
+      
+      useEffect(() => {
+        handleBodyScroll();
+      }, [page]);
+
     return (
         <div className={style.techtransfer}>
-            <Container page={page}>
+            <div className={style.container}>
                 {page ? (
                     <Base.InfoPage pageData={page} setPage={setPage} />
                 ) : null}
@@ -34,7 +46,7 @@ export const Techtransfer = () => {
                         ))}
                     </Base.ContainerItem>
                 )}
-            </Container>
+            </div>
         </div>
     );
 };
