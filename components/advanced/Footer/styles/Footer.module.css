@@ -1,0 +1,22 @@
+.footer{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--footer);
+}
+.container{
+width: var(--container);
+color:var(--fontColor);
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none; 
+}
+.container p{
+    font-size: 15px;
+}

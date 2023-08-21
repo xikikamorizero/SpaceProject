@@ -1,0 +1,27 @@
+.containerItem{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1vw;
+    column-gap: 1vw;
+}
+
+@media (max-width:1200px) {
+    .containerItem{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:800px) {
+    .containerItem{
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 2vw;
+        column-gap: 2vw;
+    }
+}
+
+@media (max-width:500px) {
+    .containerItem{
+        grid-template-columns: 1fr 1fr;
+    }
+}

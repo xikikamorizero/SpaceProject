@@ -1,7 +1,9 @@
-import HomeComponents  from "../../components/Home/Home"
+import { HomeComponents } from "../../page";
 
 export default function Home() {
-  return (
-   <HomeComponents />
-  )
+    return (
+        <div>
+            <HomeComponents />
+        </div>
+    );
 }
