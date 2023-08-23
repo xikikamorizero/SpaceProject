@@ -3,11 +3,24 @@ import Image from "next/image";
 import style from "./styles/Header.module.css";
 import logo from "./assets/logo.png";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Burger } from "./Burger";
 
 export const Header = () => {
     const [burger, setBurger] = useState(false);
+
+    const handleBodyScroll = () => {
+        if (burger) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      };
+      
+      useEffect(() => {
+        handleBodyScroll();
+      }, [burger]);
+
     return (
         <div className={style.header}>
             <div className={style.container}>
