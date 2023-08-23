@@ -60,9 +60,8 @@ export const HomeComponents = () => {
                 <div className={style.containerSearchForm}>
                     <Image
                         src={imageLogo}
+                        className={style.imageIcon}
                         alt={"Logo Image"}
-                        width={300}
-                        height={300}
                     />
                     <input
                         type={"text"}

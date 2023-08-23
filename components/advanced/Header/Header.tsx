@@ -1,9 +1,13 @@
+"use client"
 import Image from "next/image";
 import style from "./styles/Header.module.css";
 import logo from "./assets/logo.png";
 import Link from "next/link";
+import { useState } from "react";
+import { Burger } from "./Burger";
 
 export const Header = () => {
+    const [burger, setBurger] = useState(false);
     return (
         <div className={style.header}>
             <div className={style.container}>
@@ -12,6 +16,7 @@ export const Header = () => {
                         src={logo}
                         alt={"logo"}
                         draggable={false}
+                        className={style.logo}
                         width={200}
                     />
                 </Link>
@@ -36,10 +41,17 @@ export const Header = () => {
                         className={style.link}
                         draggable={false}
                     >
-                       AboutUs
+                        AboutUs
                     </Link>
                 </div>
-                <div className={style.burger}></div>
+                <div className={style.burger} onClick={()=>{setBurger(!burger)}}>
+                    <div
+                        className={
+                            burger ? style.burgerIconActive : style.burgerIcon
+                        }
+                    />
+                </div>
+                <Burger burger={burger} setBurger={setBurger} />
             </div>
         </div>
     );
