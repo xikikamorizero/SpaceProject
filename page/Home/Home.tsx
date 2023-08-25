@@ -23,7 +23,7 @@ export const HomeComponents = () => {
     const { data, isLoading, error } = useAppSelector(
         (state) => state.searchImageSlice
     );
-    console.log(isLoading);
+
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -32,15 +32,15 @@ export const HomeComponents = () => {
 
     const handleBodyScroll = () => {
         if (page) {
-          document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
         } else {
-          document.body.style.overflow = "auto";
+            document.body.style.overflow = "auto";
         }
-      };
-      
-      useEffect(() => {
+    };
+
+    useEffect(() => {
         handleBodyScroll();
-      }, [page]);
+    }, [page]);
 
     useEffect(() => {
         const debouncedSearch = debounce((value) => {
