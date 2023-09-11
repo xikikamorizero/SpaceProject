@@ -9,3 +9,9 @@
     padding: 2vw 20px;
     overflow: hidden;
 }
+
+@media (max-width:500px) {
+    .container{
+        padding: 2vw 0;
+    }
+}

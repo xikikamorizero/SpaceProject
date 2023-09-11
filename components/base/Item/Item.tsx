@@ -59,8 +59,8 @@ const Image = styled.img`
         height: 30vw;
 
         &:hover {
-            width: calc(100% + 5px);
-            height: calc(30vw + 5px);
+            width: 100%;
+            height: 30vw;
         }
     }
 `;
