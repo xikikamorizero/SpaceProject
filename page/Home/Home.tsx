@@ -2,11 +2,6 @@
 import style from "./styles/Home.module.css";
 import Image from "next/image";
 import { Base } from "../../components";
-import { styled } from "styled-components";
-import {
-    useGetSearchImageQuery,
-    searchImageApi,
-} from "../../store/SearchImage/searchImage";
 import { useEffect, useState } from "react";
 import { debounce } from "lodash";
 import { PageData } from "../../types/types";

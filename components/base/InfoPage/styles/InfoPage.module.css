@@ -7,7 +7,6 @@
 
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 
     padding-top: 20px;
     padding-bottom: 20px;
@@ -17,6 +16,8 @@
     left: 50%;
     transform: translate(-50%);
     z-index: 3;
+
+    color: var(--white);
 }
 .windownfo {
     max-width: 600px;

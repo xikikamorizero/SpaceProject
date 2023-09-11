@@ -40,11 +40,3 @@ export const Apod = () => {
         </div>
     );
 };
-
-const Container = styled.div<{ page: PageData | null }>`
-    width: var(--container);
-    max-height: ${(props) =>
-        props.page ? "calc(100vh - 123px)" : "auto"};
-    padding: 2vw 20px;
-    overflow: hidden;
-`;
