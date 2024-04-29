@@ -9,6 +9,11 @@ type Props = {
 
 export const InfoPage = ({ ...props }: Props) => {
 
+    function removeHtmlTags() {
+        const regex = /(<[^>]+)>/gi;
+        return props.pageData.description.replace(regex, "");
+      }
+
     return (
         <div className={style.container}>
             <div className={style.exit} onClick={() => props.setPage(null)}>
@@ -23,7 +28,7 @@ export const InfoPage = ({ ...props }: Props) => {
                 />
                 <div className={style.title}>{props.pageData.name}</div>
                 <div className={style.description}>
-                    {props.pageData.description}
+                    {removeHtmlTags()}
                 </div>
                 <div className={style.date}>{props.pageData.info}</div>
             </div>

@@ -50,12 +50,12 @@
   }
 
   .burgerIconActive {
-    width: 30px;
-    height: 4px;
-    background-color: var(--white);
-    position: relative;
-    transition: transform 0.2s ease;
-    transform: rotate(45deg);
+      width: 30px;
+      height: 4px;
+      background-color: var(--white);
+      position: relative;
+      transition: transform 0.2s ease;
+      transform: rotate(45deg);
   }
 
   .burgerIconActive:before,
