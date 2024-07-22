@@ -6,21 +6,21 @@ export const AboutUs = () => {
             <div className={style.container}>
                 <h1>About Us</h1>
                 <p>
-                    Welcome to our non-commercial website! We have created this
-                    site to showcase our skills and passion for space.
+                    Welcome to my non-commercial website! I have created this
+                    site to showcase my skills and passion for space.
                 </p>
                 <p>
-                    We utilize the NASA API to fetch space-related data, which
-                    we then display on our website.
+                    I utilize the NASA API to fetch space-related data, which I
+                    then display on my website.
                 </p>
                 <p>
-                    Our goal is to present you with amazing photographs, videos,
-                    and information about the Universe so that you can share our
+                    My goal is to present you with amazing photographs, videos,
+                    and information about the universe so that you can share my
                     fascination with space.
                 </p>
                 <p>
                     Stay up-to-date with the latest discoveries and news from
-                    the world of astronomy through our website!
+                    the world of astronomy through my website!
                 </p>
             </div>
         </div>
